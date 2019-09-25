@@ -1,0 +1,8 @@
+#compdef _dclnav dclnav
+
+function _dclnav {
+  _arguments \
+    '(-f --follow)'{-f,--follow}'[Follow log output]' \
+    '--tail=[Number of lines to show from the end of the logs for each container.]:number of lines: ' \
+    "*:services:($(docker-compose ps --services))"
+}
